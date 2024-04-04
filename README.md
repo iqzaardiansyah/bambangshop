@@ -35,4 +35,21 @@
 
 </details>
 
+<details>
+<summary>Reflection Publisher-3</summary>
+
+1. Observer Pattern has two variations: Push model (publisher pushes data to subscribers) and Pull model (subscribers pull data from publisher). In this tutorial case, which variation of Observer Pattern that we use?
+
+    I think we are using the Push model because in the `notify` function, the Publisher (self) iterates over a list of Subscribers obtained from the `SubscriberRepository`, and for each Subscriber, it sends a notification by invoking the `update` method on the Subscriber with the relevant payload. This direct delivery of notifications from the Publisher to the Subscribers aligns with the Push model of the Observer Pattern.
+
+2. What are the advantages and disadvantages of using the other variation of Observer Pattern for this tutorial case? (example: if you answer Q1 with Push, then imagine if we used Pull)
+
+    Implementing the Pull variation of the Observer Pattern in the given tutorial case would offer advantages such as reduced overhead and controlled data retrieval. Subscribers would only request updates from the Publisher when needed, leading to efficient resource management. However, this approach could introduce potential drawbacks, including latency in update delivery, increased complexity in implementation due to the need for polling logic, and potential issues with increased network traffic if Subscribers poll frequently. Ultimately, the suitability of the Pull model depends on the specific requirements of the application and considerations regarding resource usage and system performance.
+
+3. Explain what will happen to the program if we decide to not use multi-threading in the notification process.
+
+    If multi-threading is not utilized in the notification process, the program would encounter blocking behavior as notifications are sent to subscribers sequentially. This means that each notification process would occur one after the other, potentially leading to delays and decreased efficiency, especially if any notifications encounter long-running tasks or delays. Without multi-threading, the program's responsiveness and scalability could be adversely affected, particularly in scenarios involving a large number of subscribers or time-consuming notification tasks. Overall, the absence of multi-threading would result in synchronous and sequential notification processing, potentially impacting performance and responsiveness.
+
+</details>
+
 </details>
