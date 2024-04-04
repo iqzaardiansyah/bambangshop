@@ -18,4 +18,21 @@
 
 </details>
 
+<details>
+<summary>Reflection Publisher-2</summary>
+
+1. In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?
+
+    Separating the concerns of "Service" and "Repository" from the Model in an application architecture aligns with design principles such as the Single Responsibility Principle (SRP) and Separation of Concerns. By isolating responsibilities into distinct components, each layer can focus on a specific task: the Model encapsulates domain entities and behaviors, the Service layer manages application-specific business logic, and the Repository layer handles data access and storage. This separation enhances maintainability, scalability, and testability by enabling each component to evolve independently and promoting modularity and reusability across the system. Furthermore, it facilitates flexibility and adaptability, allowing for changes in business logic or data storage mechanisms with minimal impact on other parts of the application. Overall, this architectural approach promotes a clear and organized structure, improving the overall quality and maintainability of the codebase.
+
+2. What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?
+
+    Relying solely on the Model without separating concerns into distinct layers like Service and Repository would lead to increased code complexity and potential coupling between different parts of the application. Each model (Program, Subscriber, Notification) would need to handle not only domain entities and behaviors but also business logic, data access, and storage concerns, resulting in bloated and intertwined code. This approach could make it challenging to maintain and extend the models over time, as they would be responsible for too many responsibilities. Additionally, mixing concerns within the models could lead to a lack of clarity and hinder the ability to make changes or add new features in a modular and maintainable way. Overall, separating concerns into distinct layers promotes a clearer separation of responsibilities and enhances the maintainability, scalability, and flexibility of the codebase.
+
+3. Have you explored more about Postman? Tell us how this tool helps you to test your current work. Maybe you want to also list which features in Postman you are interested in or feel like it’s helpful to help your Group Project or any of your future software engineering projects.
+
+    Postman is a powerful tool for API testing, development, and collaboration that offers features to streamline testing processes and enhance productivity for developers. With its user-friendly interface, developers can easily send HTTP requests to APIs and inspect responses, facilitating efficient testing of endpoints and early detection of bugs. Postman's organization capabilities, including collections and environments, enable developers to manage and execute tests across different environments with configurable variables, improving consistency and reproducibility. Additionally, features like automated testing, collaboration tools, monitoring, and mock servers further enhance its utility for software engineering projects, fostering better communication, productivity, and reliability in both individual and group endeavors.
+
+</details>
+
 </details>
