@@ -15,7 +15,7 @@ impl SubscriberRepository {
         }
 
         SUBSCRIBERS.get(product_type).unwrap()
-            .insert(subscriber.url.clone(), subscriber_value);
+            .insert(subscriber_value.url.clone(), subscriber_value);
         return subscriber;
     }
 
